@@ -5,6 +5,8 @@
 # I Love Jesus Christ and Maria <3
 #
 
+clear
+
 # Clear files.
 cd 1\ -\ project/project
 rm -rf src
