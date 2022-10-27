@@ -6,17 +6,14 @@
 #
 
 # Clear files.
-cd 1\ -\ project/binaries/
-rm -rf *
-cd ../project/src
-rm -rf *
-cd ..
+cd 1\ -\ project/project
+rm -rf src
 rm -rf target
+mkdir src
+cd ../../
 
 # Copy files.
-cd ../../
 cd "$1"
-
 cp -R * "../1 - project/project/src/"
 cd "../1 - project/project/"
 
