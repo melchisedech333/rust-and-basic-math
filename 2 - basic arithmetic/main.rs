@@ -1,10 +1,16 @@
 
+mod general;
+use general::*;
+
 fn main() {
     println!("Operations: \n");
     operations();
 
     println!("\n\n\nSignals: \n");
     signals();
+
+    println!("\n\n\nAddition: \n");
+    addition();
 }
 
 fn operations() {
@@ -31,8 +37,6 @@ fn operations() {
 }
 
 fn signals() {
-    let show = |a,b| println!("{a} = {b}");
-
     show(
         (4) + (-2) + (1) - (1) ,
          4     -2  +  1  -  1
@@ -56,6 +60,23 @@ fn signals() {
     show(
         200 + (-23) - (-30) + 78 + (50 / 100) - 10,
         200    -23  +   30  + 78 + (50 / 100) - 10
+    );
+}
+
+fn addition() {
+    println!("Commutative: {} = {} = {}",
+        10 + 20 + 30,
+        30 + 20 + 10,
+        20 + 10 + 30
+    );
+
+    println!("Associative: {} = {} = {} = {} = {} = {}",
+        (10 +  20) + 30,
+        (30 +  20) + 10,
+        (20 +  10) + 30,
+         10 + (20  + 30),
+         30 + (10  + 20),
+         20 + (30  + 10),
     );
 }
 
