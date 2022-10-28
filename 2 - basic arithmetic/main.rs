@@ -14,6 +14,9 @@ fn main() {
 
     println!("\n\n\nMultiplication: \n");
     multiplication();
+
+    println!("\n\n\nDivision: \n");
+    division();
 }
 
 fn operations() {
@@ -163,6 +166,24 @@ fn multiplication() {
     a = 2901.0 / 100.0;
     b = 40.0   / 10.0;
     println!("\t{} * {} = {}", a, b, a * b);
+}
+
+fn division() {
+    let quotient = 4.0;
+    let divider = 2.0;
+    let rest = 1.0;
+    let dividend = divider * quotient + rest;
+
+    println!("{} = {} x {} + {}", dividend, divider, quotient, rest);
+    println!("{} / {} = {}", dividend, divider, dividend / divider);
+
+    let mut a = 433.0;
+    let mut b = 6.0;
+    println!("{} / {} = {}", a, b, a / b);
+
+    a = 8.0;
+    b = 1230.0;
+    println!("{} / {} = {}", a, b, a / b);
 }
 
 
