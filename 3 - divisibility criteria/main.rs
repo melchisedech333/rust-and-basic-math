@@ -2,7 +2,7 @@
 use utils::*;
 
 fn main() {
-    let value = 123;
+    let value = 2835;
     println!("\nInput: {value}\n");
 
     for number in 2..=9 {
