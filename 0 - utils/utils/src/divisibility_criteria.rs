@@ -1,11 +1,9 @@
 
 pub fn _divisible_by(value: i32, number: i32) -> bool {
     match number {
-        0 => false,
-        1 => false,
         2 => value % 2 == 0,
         3 => divisible_by_3(value),
-        4 => false,
+        4 => divisible_by_4(value),
         5 => false,
         6 => false,
         7 => false,
@@ -16,7 +14,7 @@ pub fn _divisible_by(value: i32, number: i32) -> bool {
 }
 
 fn divisible_by_3(value: i32) -> bool {
-    let number :String = value.to_string();
+    let number = value.to_string();
     let mut total = 0;
 
     for item in number.chars() {
@@ -28,6 +26,23 @@ fn divisible_by_3(value: i32) -> bool {
     }
 
     total % 3 == 0
+}
+
+fn divisible_by_4(value: i32) -> bool {
+    let number = value.to_string();
+    let offset;
+
+    if number.len() >= 2 {
+        offset = number.len() - 2;
+    } else {
+        offset = number.len() - 1;
+    }
+
+    let part = &number[offset..];
+    let number :i32 = part.to_string().trim()
+        .parse().expect("Enter a valid number.");
+    
+    number % 4 == 0
 }
 
 
