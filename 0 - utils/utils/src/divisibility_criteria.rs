@@ -1,5 +1,5 @@
 
-pub fn _divisible_by(value: i32, number: i32) -> bool {
+pub fn divisible_by(value: i32, number: i32) -> bool {
     match number {
         2 => value % 2 == 0,
         3 => divisible_by_3(value),
