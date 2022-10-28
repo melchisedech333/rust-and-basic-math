@@ -11,11 +11,14 @@ fn main() {
 
     println!("\n\n\nAddition: \n");
     addition();
+
+    println!("\n\n\nMultiplication: \n");
+    multiplication();
 }
 
 fn operations() {
     let a = |x,y| x + y;
-    println!("a: {}", a(10, 20));
+    println!("\ta: {}", a(10, 20));
 
     let calc = |x,y,c| {
         match c {
@@ -30,10 +33,10 @@ fn operations() {
     let b = 10.0;
     let c = 20.0;
 
-    println!("+: {}", calc(b, c, '+'));
-    println!("-: {}", calc(b, c, '-'));
-    println!("*: {}", calc(b, c, '*'));
-    println!("/: {}", calc(b, c, '/'));
+    println!("\t+: {}", calc(b, c, '+'));
+    println!("\t-: {}", calc(b, c, '-'));
+    println!("\t*: {}", calc(b, c, '*'));
+    println!("\t/: {}", calc(b, c, '/'));
 }
 
 fn signals() {
@@ -64,13 +67,13 @@ fn signals() {
 }
 
 fn addition() {
-    println!("Commutative: {} = {} = {}",
+    println!("\tCommutative: {} = {} = {}",
         10 + 20 + 30,
         30 + 20 + 10,
         20 + 10 + 30
     );
 
-    println!("Associative: {} = {} = {} = {} = {} = {}",
+    println!("\tAssociative: {} = {} = {} = {} = {} = {}",
         (10 +  20) + 30,
         (30 +  20) + 10,
         (20 +  10) + 30,
@@ -78,6 +81,88 @@ fn addition() {
          30 + (10  + 20),
          20 + (30  + 10),
     );
+}
+
+fn multiplication() {
+    println!("\tCommutative: {} = {} = {}",
+        10 * 20 * 30 * 40,
+        40 * 30 * 20 * 10,
+        30 * 10 * 40 * 20,
+    );
+
+    println!("\tAssociative: {} = {} = {}",
+        10 *  20 * (30  * 40),
+        40 *  30 * (20  * 10),
+        30 * (20 *  40) * 10,
+    );
+
+    println!("\tDistributive: {} = {}",
+         10 * (20 + 30),
+        (10 * 20) + (10 * 30),
+    );
+
+    println!("\tNeutral element: {}, {}, {}, {}",
+        10 * 1,
+        20 * 1,
+        1 * 10,
+        1 * 20
+    );
+
+    println!("\tAnnulment: {}, {}, {}, {}",
+        10 * 0,
+        20 * 0,
+        0 * 10,
+        0 * 20
+    );
+
+    let mut a = 0.2;
+    let mut b = 0.3;
+
+    println!("\n\t{} * {} = {}", a, b, a * b);
+
+    a = 1.2;
+    b = 0.4;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = -12.0;
+    b = 5.0;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 5.0;
+    b = -12.0;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 15.0;
+    b = 0.02;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 15.0;
+    b = 0.2;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 0.2;
+    b = 0.3;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 2.0 / 10.0;
+    b = 3.0 / 10.0;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 1.2;
+    b = 0.4;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 12.0 / 10.0;
+    b = 4.0  / 10.0;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 29.01;
+    b = 4.0;
+    println!("\t{} * {} = {}", a, b, a * b);
+
+    a = 2901.0 / 100.0;
+    b = 40.0   / 10.0;
+    println!("\t{} * {} = {}", a, b, a * b);
 }
 
 
