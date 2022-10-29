@@ -7,6 +7,20 @@
 
 clear
 
+# Validation.
+if [ "$#" -ne 1 ]; then
+    echo "Use: ./build.sh \"2 - basic arithmetic\""
+    exit 2
+fi
+
+if [ -d "$1" ] 
+then
+    echo "Build: \"$1\"" 
+else
+    echo "Directory not found: \"$1\""
+    exit 2
+fi
+
 # Clear files.
 cd 1\ -\ project/project
 rm -rf src
