@@ -3,9 +3,6 @@
  * Iesus Hominum Salvator
  */
 
-mod general;
-use general::*;
-
 fn main() {
     println!("Operations: \n");
     operations();
@@ -47,6 +44,8 @@ fn operations() {
 }
 
 fn signals() {
+    let show = |a, b| println!("\t{a} = {b}");
+
     show(
         (4) + (-2) + (1) - (1) ,
          4     -2  +  1  -  1
@@ -115,61 +114,27 @@ fn multiplication() {
         1 * 20
     );
 
-    println!("\tAnnulment: {}, {}, {}, {}",
+    println!("\tAnnulment: {}, {}, {}, {}\n",
         10 * 0,
         20 * 0,
         0 * 10,
         0 * 20
     );
+    
+    let mult = |a, b| println!("\t{} * {} = {}", a, b, a * b);
 
-    let mut a = 0.2;
-    let mut b = 0.3;
-
-    println!("\n\t{} * {} = {}", a, b, a * b);
-
-    a = 1.2;
-    b = 0.4;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = -12.0;
-    b = 5.0;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 5.0;
-    b = -12.0;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 15.0;
-    b = 0.02;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 15.0;
-    b = 0.2;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 0.2;
-    b = 0.3;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 2.0 / 10.0;
-    b = 3.0 / 10.0;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 1.2;
-    b = 0.4;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 12.0 / 10.0;
-    b = 4.0  / 10.0;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 29.01;
-    b = 4.0;
-    println!("\t{} * {} = {}", a, b, a * b);
-
-    a = 2901.0 / 100.0;
-    b = 40.0   / 10.0;
-    println!("\t{} * {} = {}", a, b, a * b);
+    mult(0.2, 0.3);
+    mult(1.2, 0.4);
+    mult(-12.0, 5.0);
+    mult(5.0, -12.0);
+    mult(15.0, 0.02);
+    mult(15.0, 0.2);
+    mult(0.2, 0.3);
+    mult(2.0 / 10.0, 3.0 / 10.0);
+    mult(1.2, 0.4);
+    mult(12.0 / 10.0, 4.0  / 10.0);
+    mult(29.01, 4.0);
+    mult(2901.0 / 100.0, 40.0   / 10.0);
 }
 
 fn division() {
