@@ -1,6 +1,6 @@
 
 /*
- * Iesus Hominum Salvator
+ * Iesus Hominum Salvator s2
  */
 
 fn main() {
@@ -143,16 +143,16 @@ fn division() {
     let rest = 1.0;
     let dividend = divider * quotient + rest;
 
-    println!("{} = {} x {} + {}", dividend, divider, quotient, rest);
-    println!("{} / {} = {}", dividend, divider, dividend / divider);
+    println!("\t{} = {} x {} + {}", dividend, divider, quotient, rest);
+    println!("\t{} / {} = {}", dividend, divider, dividend / divider);
 
     let mut a = 433.0;
     let mut b = 6.0;
-    println!("{} / {} = {}", a, b, a / b);
+    println!("\t{} / {} = {}", a, b, a / b);
 
     a = 8.0;
     b = 1230.0;
-    println!("{} / {} = {}", a, b, a / b);
+    println!("\t{} / {} = {}", a, b, a / b);
 }
 
 
