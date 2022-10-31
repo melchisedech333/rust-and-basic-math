@@ -2,6 +2,8 @@
 /**
  * Checks whether a given integer is divisible by another number.
  * Supported divisibility criteria are: 2, 3, 4, 5, 6, 7, 8, 9, 10.
+ *
+ * Iesus Hominum Salvator <3
  */
 
 pub fn divisible_by(value: i32, number: i32) -> bool {
