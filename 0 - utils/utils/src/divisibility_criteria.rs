@@ -7,7 +7,7 @@ pub fn divisible_by(value: i32, number: i32) -> bool {
         5 => divisible_by_5(value),
         6 => value % 2 == 0 && divisible_by_3(value),
         7 => divisible_by_7(value),
-        8 => false,
+        8 => divisible_by_8(value),
         9 => false,
         10 => false,
         11 => false,
@@ -114,6 +114,23 @@ fn divisible_by_7(value :i32) -> bool {
     }
 
     total % 7 == 0
+}
+
+fn divisible_by_8(value :i32) -> bool {
+    let number = value.to_string();
+    let part;
+
+    if number.len() > 3 {
+        let len = number.len() - 3;
+        part = &number[len..];
+    } else {
+        part = &number[..];
+    }
+
+    let total :i32 = part.to_string()
+        .parse().expect("Invalid number.");
+
+    total % 8 == 0
 }
 
 
