@@ -18,7 +18,7 @@ pub fn divisible_by(value: i32, number: i32) -> bool {
     }
 }
 
-fn sum_and_divide(value: i32, current :i32) -> bool {
+fn sum_and_rem(value: i32, current :i32) -> bool {
     let number = value.to_string();
     let mut total = 0;
 
@@ -34,7 +34,7 @@ fn sum_and_divide(value: i32, current :i32) -> bool {
 }
 
 fn divisible_by_3(value: i32) -> bool {
-    sum_and_divide(value, 3)
+    sum_and_rem(value, 3)
 }
 
 fn divisible_by_4(value: i32) -> bool {
@@ -138,7 +138,7 @@ fn divisible_by_8(value :i32) -> bool {
 }
 
 fn divisible_by_9(value: i32) -> bool {
-    sum_and_divide(value, 9)
+    sum_and_rem(value, 9)
 }
 
 
