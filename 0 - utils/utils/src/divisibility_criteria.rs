@@ -10,11 +10,10 @@ pub fn divisible_by(value: i32, number: i32) -> bool {
         8  => divisible_by_8(value),
         9  => divisible_by_9(value),
         10 => divisible_by_10(value),
-        11 => false,
-        12 => false,
-        15 => false,
-        25 => false,
-        _  => false
+        _  => {
+            println!("Number {} not supported.", number);   
+            false
+        }
     }
 }
 
