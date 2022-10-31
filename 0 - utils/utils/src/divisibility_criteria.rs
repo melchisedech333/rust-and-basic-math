@@ -1,24 +1,24 @@
 
 pub fn divisible_by(value: i32, number: i32) -> bool {
     match number {
-        2 => value % 2 == 0,
-        3 => divisible_by_3(value),
-        4 => divisible_by_4(value),
-        5 => divisible_by_5(value),
-        6 => value % 2 == 0 && divisible_by_3(value),
-        7 => divisible_by_7(value),
-        8 => divisible_by_8(value),
-        9 => false,
+        2  => value % 2 == 0,
+        3  => divisible_by_3(value),
+        4  => divisible_by_4(value),
+        5  => divisible_by_5(value),
+        6  => value % 2 == 0 && divisible_by_3(value),
+        7  => divisible_by_7(value),
+        8  => divisible_by_8(value),
+        9  => divisible_by_9(value),
         10 => false,
         11 => false,
         12 => false,
         15 => false,
         25 => false,
-        _ => false
+        _  => false
     }
 }
 
-fn divisible_by_3(value: i32) -> bool {
+fn sum_and_divide(value: i32, current :i32) -> bool {
     let number = value.to_string();
     let mut total = 0;
 
@@ -30,7 +30,11 @@ fn divisible_by_3(value: i32) -> bool {
         total += num;
     }
 
-    total % 3 == 0
+    total % current == 0
+}
+
+fn divisible_by_3(value: i32) -> bool {
+    sum_and_divide(value, 3)
 }
 
 fn divisible_by_4(value: i32) -> bool {
@@ -131,6 +135,10 @@ fn divisible_by_8(value :i32) -> bool {
         .parse().expect("Invalid number.");
 
     total % 8 == 0
+}
+
+fn divisible_by_9(value: i32) -> bool {
+    sum_and_divide(value, 9)
 }
 
 
