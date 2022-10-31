@@ -9,7 +9,7 @@ pub fn divisible_by(value: i32, number: i32) -> bool {
         7  => divisible_by_7(value),
         8  => divisible_by_8(value),
         9  => divisible_by_9(value),
-        10 => false,
+        10 => divisible_by_10(value),
         11 => false,
         12 => false,
         15 => false,
@@ -139,6 +139,17 @@ fn divisible_by_8(value :i32) -> bool {
 
 fn divisible_by_9(value: i32) -> bool {
     sum_and_rem(value, 9)
+}
+
+fn divisible_by_10(value: i32) -> bool {
+    let number = value.to_string();
+    let offset = number.len() - 1;
+    let part   = &number[offset..];
+    
+    let number :i32 = part.to_string().trim()
+        .parse().expect("Enter a valid number.");
+
+    number == 0
 }
 
 
